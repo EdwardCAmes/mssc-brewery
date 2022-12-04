@@ -34,7 +34,7 @@ public class BeerController {
 
         HttpHeaders headers = new HttpHeaders();
         // TODO -- add server to the location URL
-        headers.add("Location", "/api/v1/beer" + savedBeer.getId().toString());
+        headers.add("Location", "/api/v1/beer/" + savedBeer.getId().toString());
 
         return new ResponseEntity(headers, HttpStatus.CREATED);
     }
